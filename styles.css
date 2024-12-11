@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+/*Global Values*/
+
+.blur {
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(7px);
+}
+
+body:after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: url("https://c.wallhere.com/photos/d9/56/photography_car_road_bokeh_banner_lights_head_lights_buses-39329.jpg!d");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header {
+    width: 100%;
+    margin: 20px auto;
+    padding: 7px 0;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.35);
+    color: black;
+}
+
+header>h1 {
+    font-size: clamp(2.5rem, 7vw, 4rem);
+}
+
+header>p {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+}
+
+/*Header Code*/
+
+form {
+    background-color: rgba(255, 255, 255, 0.85);
+    width: 70%;
+    height: auto;
+    padding: 20px 10px;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 1px solid black;
+    display: flex;
+    font-size: 30px;
+    justify-content: space-around;
+    gap: 2rem;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+label,
+p {
+
+    margin-left: 1vw;
+}
+
+input,
+select {
+    width: auto;
+    padding: 10px auto;
+    padding-left: 5px;
+    font-size: 25px;
+    margin: auto 1.5vw;
+}
+
+label>input[name="recomendation"] {
+    background-color: red;
+    font-size: 400px;
+}
+
+#dropdown {
+    color: rgb(118, 118, 118);
+
+}
+
+input[type="submit"] {
+    margin: 10px;
+}
+
+label:has(input[type="radio"],[type="checkbox"]) {
+    font-size: 0.75em;
+    margin-left:1.5vw;
+}
+input[type="radio"]{
+    margin-right: 10px;
+    min-height: 1.25vw;
+    min-width: 1.25vw;
+}
+input[type="checkbox"]{   
+    margin-right: 10px;
+    min-height: 1.15vw;
+    min-width: 1.15vw;
+}
+textarea {
+    margin: 10px;
+    padding: 5px 7px;
+    font-size: 25px;
+    color: rgb(118, 118, 118);
+    height: 100px;
+}
+
+
+@media (max-width:2000px) {
+    form {
+        width: 85%;
+    }
+}
+
+@media (orientation:portrait) {
+    form {
+        margin: 0;
+        padding: 0;
+        border-left: 0;
+        border-right: 0;
+        border-radius: 0;
+        width: 100%;
+    }
+
+    label,
+    p {
+        font-size: clamp(30px, 5vw, 40px);
+        margin-left: 1vw;
+    }
+
+    input,
+    select {
+        width: auto;
+        padding: 10px auto;
+        font-size: 25px;
+        margin: auto 1.5vw;
+    }
+
+}
